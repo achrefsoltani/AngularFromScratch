@@ -1,0 +1,7 @@
+<form #monFormulaire="ngForm">
+  Email : <input required email  ngModel name="email" type="text" class="form-control" />
+  Password :  <input ngModel required minlength="4" name="password" type="text" class="form-control" />
+  <button (click)="submit(monFormulaire)" [disabled]="monFormulaire.invalid" class="btn btn-primary">
+    Login
+  </button>
+</form>

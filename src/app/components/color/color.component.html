@@ -1,0 +1,22 @@
+<div
+  [style.backgroundColor]="color"
+>
+  Bonjour tout le monde
+</div>
+
+
+<input
+  (change)="changeColor(colorInput.value)"
+  #colorInput
+  type="text" class="form-control">
+<input
+    [(ngModel)]="color"
+  type="color" class="form-control">
+
+  <button
+  (click)="changeColor(defaultColor)"
+  class="btn btn-primary">
+  reset color
+</button>
+
+<app-colorfils (sendColorToDad)="recieveDataFromSon($event)"></app-colorfils>
